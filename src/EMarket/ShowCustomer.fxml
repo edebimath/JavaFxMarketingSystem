@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="mainPanel" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EMarket.ShowCustomerController">
+    <stylesheets>
+        <URL value="@showcustomer.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="96.0" layoutY="71.0" prefHeight="46.0" prefWidth="408.0" text="Customer List of Selected E-Market">
+         <font>
+            <Font name="Times New Roman Bold" size="22.0" />
+         </font></Label>
+      <TableView fx:id="CustomerTable" layoutY="118.0" prefHeight="281.0" prefWidth="600.0">
+        <columns>
+          <TableColumn fx:id="custIdColumn" prefWidth="75.0" text="Id" />
+          <TableColumn fx:id="custNameColumn" prefWidth="155.20001220703125" text="Name" />
+            <TableColumn fx:id="custAgeColumn" prefWidth="66.39996337890625" text="Age" />
+            <TableColumn fx:id="custAddressColumn" prefWidth="201.5999755859375" text="Address" />
+            <TableColumn fx:id="custGenderColumn" prefWidth="102.40008544921875" text="Gender" />
+        </columns>
+         
+      </TableView>
+      <ComboBox fx:id="emarketBox" layoutX="99.0" layoutY="33.0" prefWidth="150.0" promptText="E-Market Name" />
+      <Button layoutX="300.0" layoutY="32.0" mnemonicParsing="false" onAction="#loadData" prefHeight="26.0" prefWidth="138.0" text="Show Customers" />
+   </children>
+</AnchorPane>

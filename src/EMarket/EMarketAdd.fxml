@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="mainPanel" prefHeight="265.0" prefWidth="434.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EMarket.EMarketAddController">
+    <stylesheets>
+        <URL value="@emarketadd.css" />
+    </stylesheets>
+   <children>
+      <Label fx:id="label" layoutX="95.0" layoutY="14.0" prefHeight="54.0" prefWidth="298.0" text="Add New E-Market">
+         <font>
+            <Font name="Times New Roman Bold" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="ahmet" alignment="CENTER" layoutX="127.0" layoutY="75.0" promptText="Id" />
+      <TextField fx:id="mehmet" alignment="CENTER" layoutX="127.0" layoutY="114.0" promptText="Name" />
+      <Button fx:id="addButton" layoutX="67.0" layoutY="181.0" mnemonicParsing="false" onAction="#addEMarket" prefHeight="54.0" prefWidth="118.0" text="Add New E-Market" />
+      <Button fx:id="cancelButton" layoutX="216.0" layoutY="181.0" mnemonicParsing="false" onAction="#cancel" prefHeight="54.0" prefWidth="118.0" text="Cancel" />
+      <Button fx:id="check" layoutX="369.0" layoutY="14.0" mnemonicParsing="false" onAction="#yazdır" opacity="0.0" text="yazdır" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="mainPanel" prefHeight="321.0" prefWidth="464.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Customer.CustomerAddController">
+    <stylesheets>
+        <URL value="@customeradd.css" />
+    </stylesheets>
+   <children>
+      <Label fx:id="merhaba" layoutX="54.0" layoutY="14.0" prefHeight="42.0" prefWidth="353.0" text="Customer Add/Update Operation">
+         <font>
+            <Font name="Times New Roman Bold" size="24.0" />
+         </font></Label>
+      <VBox layoutX="24.0" layoutY="76.0" prefHeight="270.0" prefWidth="414.0">
+         <children>
+            <TextField fx:id="CustId" alignment="CENTER" prefHeight="35.0" prefWidth="387.0" promptText="Id" />
+            <TextField fx:id="CustName" alignment="CENTER" prefHeight="35.0" prefWidth="387.0" promptText="Name" />
+            <TextField fx:id="CustAge" alignment="CENTER" prefHeight="35.0" prefWidth="387.0" promptText="Age" />
+            <TextField fx:id="CustAddress" alignment="CENTER" prefHeight="35.0" prefWidth="387.0" promptText="Address" />
+            <HBox prefHeight="30.0" prefWidth="387.0">
+               <children>
+                  <RadioButton fx:id="genderMale" contentDisplay="RIGHT" mnemonicParsing="false" prefHeight="30.0" prefWidth="98.0" text="Male">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="genderGroup" />
+                     </toggleGroup>
+                     <HBox.margin>
+                        <Insets left="110.0" />
+                     </HBox.margin>
+                  </RadioButton>
+                  <RadioButton fx:id="genderFemale" mnemonicParsing="false" prefHeight="35.0" prefWidth="158.0" text="Female" toggleGroup="$genderGroup" />
+               </children>
+            </HBox>
+            <HBox prefHeight="42.0" prefWidth="387.0">
+               <children>
+                  <Button fx:id="addButton" mnemonicParsing="false" onAction="#addCustomer" prefHeight="42.0" prefWidth="206.0" text="Add Customer" />
+                  <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancel" prefHeight="42.0" prefWidth="206.0" text="Cancel" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

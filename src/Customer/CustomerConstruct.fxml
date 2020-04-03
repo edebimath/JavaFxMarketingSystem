@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="mainPanel" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Customer.CustomerConstructController">
+    <stylesheets>
+        <URL value="@customerconstruct.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" prefHeight="46.0" prefWidth="408.0" text="Customer List">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font></Label>
+      <TableView fx:id="CustomerTable" layoutY="60.0" prefHeight="258.0" prefWidth="600.0">
+        <columns>
+          <TableColumn fx:id="custIdColumn" prefWidth="75.0" text="Id" />
+          <TableColumn fx:id="custNameColumn" prefWidth="155.20001220703125" text="Name" />
+            <TableColumn fx:id="custAgeColumn" prefWidth="66.39996337890625" text="Age" />
+            <TableColumn fx:id="custAddressColumn" prefWidth="201.5999755859375" text="Address" />
+            <TableColumn fx:id="custGenderColumn" prefWidth="102.40008544921875" text="Gender" />
+        </columns>
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#deleteCustomer" text="delete" />
+                <MenuItem mnemonicParsing="false" onAction="#editCustomer" text="edit" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+         <opaqueInsets>
+            <Insets left="5.0" right="5.0" />
+         </opaqueInsets>
+      </TableView>
+      <Button fx:id="addButton" layoutX="279.0" layoutY="339.0" mnemonicParsing="false" onAction="#addtoanEMarket" prefHeight="26.0" prefWidth="286.0" text="Add Selected Customer to the E-Market" />
+      <ComboBox fx:id="emarketBox" layoutX="37.0" layoutY="340.0" prefWidth="150.0" promptText="Select E-Market" />
+   </children>
+</AnchorPane>

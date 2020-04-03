@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EMarket.EMarketMainController">
+    <stylesheets>
+        <URL value="@emarketmain.css" />
+    </stylesheets>
+   <children>
+      <Label fx:id="label" layoutX="145.0" layoutY="24.0" prefHeight="60.0" prefWidth="260.0" text="E-Market Management">
+         <font>
+            <Font name="Times New Roman Bold" size="24.0" />
+         </font></Label>
+      <Button fx:id="showEMarket" layoutX="14.0" layoutY="97.0" mnemonicParsing="false" onAction="#showEMarketTable" prefHeight="115.0" prefWidth="150.0" text="Show E-Market List" />
+      <Button fx:id="addEMarket" layoutX="14.0" layoutY="229.0" mnemonicParsing="false" onAction="#addEMarketTable" prefHeight="115.0" prefWidth="150.0" text="Add New E-Market" />
+      <Button fx:id="showCustomersOfEMarket" layoutX="385.0" layoutY="97.0" mnemonicParsing="false" onAction="#showCustomersofEMarket" prefHeight="115.0" prefWidth="206.0" text="Show Customers of an E-Market" />
+      <Button fx:id="addCustomertoEMarket" layoutX="385.0" layoutY="229.0" mnemonicParsing="false" onAction="#addCustomertoEMarket" prefHeight="115.0" prefWidth="206.0" text="Add new Customer to an E-Market" />
+      <ImageView fitHeight="205.0" fitWidth="206.0" layoutX="172.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@E-Market.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
